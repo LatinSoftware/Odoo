@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id ="floristeria_res_partner_contacts_inherit_view" model="ir.ui.view">
+            <field name="name">view.sale.order.contacts.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml" >
+                <xpath expr="//field[@name='partner_shipping_id']" position="replace">
+                    <field name="contact_shipping_id_domain" invisible="1"/>
+                    <field name="contact_shipping_id" context="{'default_partner_id': partner_id}" 
+                    options="{'always_reload': True}" 
+                    on_change="1" can_create="true" 
+                    can_write="true"
+                    modifiers="{'readonly':[['state','not in',['draft','sent','sale']]]}" 
+                    required="True"
+                    domain="contact_shipping_id_domain"
+                    id="partner_shipping_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
