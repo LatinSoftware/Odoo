@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="cheque_banreservas_format" model="cheque.setting">
+            <field name="name">Banreservas</field>
+            <field name="font_size">25.00</field>
+            <field name="is_partner">True</field>
+            <field name="partner_m_top">373.00</field>
+            <field name="partner_m_left">188.00</field>
+            <field name="is_date">True</field>
+            <field name="date_m_top">303.00</field>
+            <field name="f_d_m_left">830.00</field>
+            <field name="s_d_m_left">850.00</field>
+            <field name="t_d_m_left">875.00</field>
+            <field name="fo_d_m_left">895.00</field>
+            <field name="fi_d_m_left">920.00</field>
+            <field name="si_d_m_left">940.00</field>
+            <field name="se_d_m_left">960.00</field>
+            <field name="e_d_m_left">980.00</field>
+            <field name="is_concepto_fecha">True</field>
+            <field name="concepto_fecha_mt">80.00</field>
+            <field name="concepto_fecha_ml">0.00</field>
+            <field name="concepto_fecha_f_d_m_left">0.00</field>
+            <field name="concepto_fecha_s_d_m_left">-1.00</field>
+            <field name="concepto_fecha_t_d_m_left">-1.00</field>
+            <field name="concepto_fecha_fo_d_m_left">-1.00</field>
+            <field name="concepto_fecha_fi_d_m_left">-1.00</field>
+            <field name="concepto_fecha_si_d_m_left">-1.00</field>
+            <field name="concepto_fecha_se_d_m_left">-1.00</field>
+            <field name="concepto_fecha_e_d_m_left">-1.00</field>
+            <field name="concepto_date_seprator">/</field>
+            <field name="is_concepto_pago">True</field>
+            <field name="concepto_mt">70.00</field>
+            <field name="concepto_ml">150.00</field>
+            <field name="is_concepto_monto">True</field>
+            <field name="concepto_monto_mt">80.00</field>
+            <field name="concepto_monto_ml">800.00</field>
+            <field name="is_concepto_solicitud"></field>
+            <field name="solicitud_monto_mt">50.00</field>
+            <field name="solicitud_monto_ml">150.00</field>
+            <field name="is_concepto_trans">True</field>
+            <field name="tras_monto_mt">90.00</field>
+            <field name="tras_monto_ml">150.00</field>
+            <field name="is_amount">True</field>
+            <field name="amt_m_top">373.00</field>
+            <field name="amt_m_left">810.00</field>
+            <field name="is_amount_word">True</field>
+            <field name="word_in_f_line">5</field>
+            <field name="amt_w_m_top">418.00</field>
+            <field name="amt_w_m_left">45.00</field>
+        </record>
+    </data>
+</odoo>
