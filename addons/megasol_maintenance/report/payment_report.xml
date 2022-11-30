@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="megasol_maintenance_payment_inherited" 
+    inherit_id="account.report_payment_receipt_document">
+        <xpath expr="//table" position="after">
+            <img src='/megasol_maintenance/static/src/img/firma.png' />
+        </xpath>
+        
+    </template>
+</odoo>

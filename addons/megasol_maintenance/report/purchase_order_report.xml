@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="megasol_maintenance_purchase_order_inherit" 
+        inherit_id="purchase.report_purchaseorder_document" >
+
+        <xpath expr="//div[@id='total']" position="after">
+            <img src='/megasol_maintenance/static/src/img/firma.png' />
+        </xpath>
+
+    </template>
+</odoo>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="megasol_maintenance_equipment_inherit_view_form" model="ir.ui.view">
+         <field name="name">megasol.maintenance.equipment</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form"/>
+        <field name="priority">100</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='location']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='scrap_date']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='model']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='serial_no']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="account_move_id" options="{'no_create': True, 'no_create_edit':True}" />
+                <field name="res_partner_id" />
+                <field name="maintenance_qty"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="megasol_maintenance_equipment_inherit_view_kanban" model="ir.ui.view">
+        <field name="name">megasol.maintenance.equipment.kanban.view</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_kanban"/>
+        <field name="priority"  eval="8" />
+        <field name="arch" type="xml">
+           <xpath expr="//kanban/templates/t/div/div" position="after">
+                <field name="res_partner_id" />
+           </xpath>
+        </field>
+    </record>
+    <record id="megasol_maintenance_equipment_inherit_view_tree" model="ir.ui.view">
+        <field name="name">megasol.maintenance.equipment.kanban.tree</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_tree"/>
+        <field name="priority" eval="8" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='serial_no']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='technician_user_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+           <xpath expr="//field[@name='name']" position="after">
+                <field name="res_partner_id"  />
+                <field name="partner_vat" />
+                <field name="partner_phone" optional="show" />
+                <field name="partner_mobile" optional="hide" />
+                <field name="partner_email" optional="hide" />
+                <field name="partner_direction" optional="hide" />
+                <field name="partner_city" optional="show" />
+                <field name="partner_province" optional="show" />
+           </xpath>
+        </field>
+    </record>
+</odoo>
