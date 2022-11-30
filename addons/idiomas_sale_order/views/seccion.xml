@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- sale.seccion form view -->
+    <record id="sale_seccion_view_form" model="ir.ui.view">
+        <field name="name">sale.seccion.view.form</field>
+        <field name="model">sale.seccion</field>
+        <field name="arch" type="xml">
+            <form string="Seccion">
+                <sheet>
+                    <group>
+                        <group>
+                            <!-- Add your fields here -->
+                            <field name="name"/>
+                            <field name="code" class="text-uppercase" />
+                            <field name="professor_id"  />
+                            <field name="student_qty"/>
+                            
+                        </group>
+                        <group>
+                            <!-- Add your fields here -->
+                            <field name="languaje_id"/>
+                            <field name="level_id_domain" invisible="1"/>
+                            <field name="level_id" domain="level_id_domain"/>
+                            <field name="room_id"/>
+                            <field name="schedule_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- sale.seccion tree view -->
+    <record id="sale_seccion_view_tree" model="ir.ui.view">
+        <field name="name">sale.seccion.view.tree</field>
+        <field name="model">sale.seccion</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="code"/>
+                <field name="student_qty"/>
+                <field name="languaje_id"/>
+                <field name="level_id"/>
+                <field name="room_id"/>
+                <field name="schedule_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- sale.seccion action window -->
+    <record id="sale_seccion_action" model="ir.actions.act_window">
+        <field name="name">Seccion</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.seccion</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                <!-- Add Text Here -->
+                Mantenimiento de secciones
+            </p>
+        </field>
+    </record>
+</odoo>

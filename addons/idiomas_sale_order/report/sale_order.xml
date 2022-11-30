@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="idiomas_sale_order_sale_order_inherit" 
+        inherit_id="sale.report_saleorder_document" >
+
+        <xpath expr="//div[@id='informations']" position="after">
+             <div class="row mt32 mb32" id="idiomas1" >
+                <div t-if="doc.seccion_id" class="col-auto col-3 mw-100 mb-2">
+                    <strong>Seccion:</strong>
+                    <p class="m-0" t-field="doc.seccion_id.name"/>
+                </div>
+                <div t-if="doc.languaje_name" class="col-auto col-3 mw-100 mb-2">
+                    <strong>Idioma:</strong>
+                    <p class="m-0" t-field="doc.languaje_name"/>
+                </div>
+                <div t-if="doc.level_name" class="col-auto col-3 mw-100 mb-2">
+                    <strong>Nivel:</strong>
+                    <p class="m-0" t-field="doc.level_name"/>
+                </div>
+                <div t-if="doc.room_name" class="col-auto col-3 mw-100 mb-2">
+                    <strong>Aula:</strong>
+                    <p class="m-0" t-field="doc.room_name"/>
+                </div>
+             </div>
+             <div class="row mt32 mb32" id="idiomas2" >
+                <div t-if="doc.schedule_name" class="col-auto  mw-100 mb-2">
+                    <strong>Horario:</strong>
+                    <p class="m-0" t-field="doc.schedule_name"/>
+                </div>
+                <div t-if="doc.professor_name" class="col-auto mw-100 mb-2">
+                    <strong>Profesor:</strong>
+                    <p class="m-0" t-field="doc.professor_name"/>
+                </div>
+                <div t-if="doc.bimestre_id" class="col-auto mw-100 mb-2">
+                    <strong>Bimestre:</strong>
+                    <p class="m-0" t-field="doc.bimestre_id.name"/>
+                </div>
+             </div>
+        </xpath>
+        <xpath expr="//div[@name='signature']" position="after">
+            <!-- Add your fields here -->
+            <div class="row text-center" style="margin-top: 120px">
+                <div class="col-6">
+                    <span t-field="doc.user_id.name"  
+                    style="position: absolute;
+                    top: -24px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 18px; " />
+
+                    <div class="linea" style="border-top: 1px solid black;
+                    height: 2px;
+                    max-width: 200px;
+                    padding: 0;
+                    margin: 0 auto;"></div>
+
+                    Registrado por
+                </div>
+                <div class="col-6" >
+                    <div class="linea" style="border-top: 1px solid black;
+                    height: 2px;
+                    max-width: 200px;
+                    padding: 0;
+                    margin: 0 auto;"></div>
+                    Firma Coordinador
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

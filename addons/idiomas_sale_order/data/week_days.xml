@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+        <data>
+            <!-- Add you code here -->
+            <record id="monday" model="sale.weekday">
+                <field name="name">monday</field>
+            </record>
+            <record id="tuesday" model="sale.weekday">
+                <field name="name">tuesday</field>
+            </record>
+            <record id="wednesday" model="sale.weekday">
+                <field name="name">wednesday</field>
+            </record>
+            <record id="thuesday" model="sale.weekday">
+                <field name="name">thuesday</field>
+            </record>
+            <record id="friday" model="sale.weekday">
+                <field name="name">friday</field>
+            </record>
+            <record id="saturday" model="sale.weekday">
+                <field name="name">saturday</field>
+            </record>
+            <record id="sunday" model="sale.weekday">
+                <field name="name">sunday</field>
+            </record>
+        </data>
+</odoo>

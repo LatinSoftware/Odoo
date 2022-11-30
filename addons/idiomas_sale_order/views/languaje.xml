@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- sale.languaje tree view -->
+    <record id="sale_languaje_view_tree" model="ir.ui.view">
+        <field name="name">sale.languaje.view.tree</field>
+        <field name="model">sale.languaje</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+    <!-- sale.languaje action window -->
+    <record id="sale_languaje_action" model="ir.actions.act_window">
+        <field name="name">Idiomas</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.languaje</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                <!-- Add Text Here -->
+               Crear lenguaje
+            </p>
+        </field>
+    </record>
+</odoo>

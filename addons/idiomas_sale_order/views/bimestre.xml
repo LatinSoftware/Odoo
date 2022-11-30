@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- sale.bimestre tree view -->
+    <record id="sale_bimestre_view_tree" model="ir.ui.view">
+        <field name="name">sale.bimestre.view.tree</field>
+        <field name="model">sale.bimestre</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- sale.bimestre action window -->
+    <record id="sale_bimestre_action" model="ir.actions.act_window">
+        <field name="name">Bimestres</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.bimestre</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                <!-- Add Text Here -->
+                Crear Bimestre
+            </p>
+        </field>
+    </record>
+</odoo>
