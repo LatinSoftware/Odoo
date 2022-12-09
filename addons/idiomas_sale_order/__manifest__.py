@@ -9,7 +9,7 @@
     'maintainer': 'Rafael Abreu',
     'depends': [
         'web_domain_field',
-        'sale'
+        'sale_management'
     ],
     'data': [
         'views/languaje.xml',
