@@ -11,11 +11,14 @@
     'application': False,
     'auto_install': False,
     # any module necessary for this one to work correctly
-    'depends': ['stock'],
+    'depends': ['stock', 'web_domain_field'],
 
     # always loaded
     'data': [
-
+        'views/area_view.xml',
+        'views/product_category.xml',
+        'views/product_template.xml',
+        'security/ir.model.access.csv'
     ],
 
 }

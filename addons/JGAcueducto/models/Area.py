@@ -13,7 +13,8 @@ class StockArea(models.Model):
     
     
     def GenerateSecuence(self):
-        secuence = self.category_id.name + self.code + str(self.next_number).zfill(self.mida_secuence)
+        number = str(self.next_number).zfill(self.mida_secuence)
+        secuence = self.category_id.code + self.code + number
         self.next_number += self.incremental
         return secuence
     
