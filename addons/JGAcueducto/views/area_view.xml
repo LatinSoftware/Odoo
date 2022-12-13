@@ -5,8 +5,58 @@
         <field name="model">stock.area</field>
         <field name="priority">100</field>
         <field name="arch" type="xml">
-
-
+            <form string="Area">
+                <group name="area" string="Area">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="category_id"/>
+                    <field name="mida_secuence"/>
+                    <field name="next_number"/>
+                    <field name="cost_percentage"/>
+                </group>
+            </form>
         </field>
     </record>
+
+    <!-- stock.area tree view -->
+    <record id="model_name_view_tree" model="ir.ui.view">
+        <field name="name">stock.area.view.tree</field>
+        <field name="model">stock.area</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="code"/>
+                <field name="name"/>
+                <field name="category_id"/>
+                <field name="mida_secuence" optional="show" />
+                <field name="next_number" optional="show"/>
+                <field name="cost_percentage" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- stock.area action window -->
+    <record id="stock_area_action" model="ir.actions.act_window">
+        <field name="name">Areas</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">stock.area</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                <!-- Add Text Here -->
+                Mantenimiento de area
+            </p><p>
+                <!-- More details about what a user can do with this object will be OK --> 
+                El usuario podra crear, editar, ver y eliminar las areas asociadas al producto.
+            </p>
+        </field>
+    </record>
+
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="stock_area__menu_item"
+        name="Area"
+        parent="stock.menu_product_in_config_stock" action="stock_area_action"
+        sequence="11" />
+
 </odoo>
