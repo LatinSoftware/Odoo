@@ -330,3 +330,13 @@ addons/l10n_latam_invoice/wizards/account_move_reversal.py
 addons/l10n_latam_invoice/wizards/__pycache__/__init__.cpython-38.pyc
 addons/l10n_latam_invoice/wizards/__pycache__/account_debit_note.cpython-38.pyc
 addons/l10n_latam_invoice/wizards/__pycache__/account_move_reversal.cpython-38.pyc
+addons/megasol_maintenance/.idea/.gitignore
+addons/megasol_maintenance/.idea/megasol_maintenance.iml
+addons/megasol_maintenance/.idea/misc.xml
+addons/megasol_maintenance/.idea/modules.xml
+addons/megasol_maintenance/.idea/inspectionProfiles/profiles_settings.xml
+addons/megasol_maintenance/.idea/.gitignore
+addons/megasol_maintenance/.idea/megasol_maintenance.iml
+addons/megasol_maintenance/.idea/misc.xml
+addons/megasol_maintenance/.idea/modules.xml
+addons/megasol_maintenance/.idea/inspectionProfiles/profiles_settings.xml

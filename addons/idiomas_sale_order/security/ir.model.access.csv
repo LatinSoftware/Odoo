@@ -1,9 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_sale_languaje,access_sale_language,model_sale_languaje,,1,1,1,1
-access_sale_level,access_sale_level,model_sale_level,,1,1,1,1
-access_sale_schedule,access_sale_schedule,model_sale_schedule,,1,1,1,1
-access_sale_seccion,access_sale_seccion,model_sale_seccion,,1,1,1,1
-access_sale_room,access_sale_room,model_sale_room,,1,1,1,1
-access_sale_weekday,access_sale_weekday,model_sale_weekday,,1,0,0,0
-access_sale_bimestre,access_sale_bimestre,model_sale_bimestre,,1,1,1,1
-access_sale_professor,access_sale_professor,model_sale_professor,,1,1,1,1
