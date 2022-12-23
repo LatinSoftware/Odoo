@@ -16,13 +16,4 @@ class StockArea(models.Model):
         number = str(self.next_number).zfill(self.mida_secuence)
         secuence = self.category_id.code + self.code + number
         self.next_number += self.incremental
-        return secuence
-    
-    _sql_constraints = [
-        ('code_uk_field', 'unique(code)', 'Codigo ya esta registrado en el sistema.')
-    ]
-    
-    
-    
-
-    
+        return secuence    
