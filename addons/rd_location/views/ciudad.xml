@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_ciudad_tree" model="ir.ui.view">
+        <field name="name">Vista de árbol de ciudades</field>
+        <field name="model">ciudad</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="codigo" string="Código"/>
+                <field name="nombre" string="Nombre"/>
+                <field name="country_id" string="País"/>
+                <field name="municipio_id" string="Municipio"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_ciudad_form" model="ir.ui.view">
+        <field name="name">Vista de formulario de ciudades</field>
+        <field name="model">ciudad</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="codigo" string="Código"/>
+                        <field name="nombre" string="Nombre"/>
+                        <field name="country_id" string="País"/>
+                        <field name="municipio_id_domain" string="Municipio" invisible="1" />
+                        <field name="municipio_id" domain="municipio_id_domain" string="Municipio"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_window_ciudad" model="ir.actions.act_window">
+        <field name="name">Acción de ventana de ciudades</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ciudad</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_ciudad_tree"/>
+    </record>
+</odoo>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="view_municipio_tree" model="ir.ui.view">
+        <field name="name">Vista de árbol de municipios</field>
+        <field name="model">municipio</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="codigo" string="Código"/>
+                <field name="nombre" string="Nombre"/>
+                <field name="country_id" string="País"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_municipio_form" model="ir.ui.view">
+        <field name="name">Vista de formulario de municipios</field>
+        <field name="model">municipio</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="codigo" string="Código"/>
+                        <field name="nombre" string="Nombre"/>
+                        <field name="country_id" string="País"/>
+                        <field name="provincia_id_domain" invisible="1" />
+                        <field name="provincia_id" domain="provincia_id_domain" string="Provincia"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>    
+    <record id="action_window_municipio" model="ir.actions.act_window">
+        <field name="name">Municipios</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">municipio</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_municipio_tree"/>
+    </record>
+    
+</odoo>

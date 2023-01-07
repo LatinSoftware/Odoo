@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="view_sector_tree" model="ir.ui.view">
+        <field name="name">Vista de árbol de sectores</field>
+        <field name="model">sector</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Nombre"/>
+                <field name="code" string="Código"/>
+                <field name="country_id" string="País"/>
+                <field name="provincia_id" string="Provincia"/>
+                <field name="municipio_id" string="Municipio"/>
+                <field name="city_id" string="Sección"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="view_sector_form" model="ir.ui.view">
+        <field name="name">Vista de formulario de sectores</field>
+        <field name="model">sector</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" string="Nombre"/>
+                        <field name="code" string="Código"/>
+                        <field name="country_id" string="País"/>
+                        <field name="provincia_id_domain" invisible="1"/>
+                        <field name="provincia_id" string="Provincia" domain="provincia_id_domain"/>
+                        <field name="municipio_id_domain" invisible="1" />
+                        <field name="municipio_id" string="Municipio" domain="municipio_id_domain"/>
+                        <field name="city_id_domain" string="Sección" invisible="1" />
+                        <field name="city_id" string="Sección" domain="city_id_domain"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_window_sector" model="ir.actions.act_window">
+        <field name="name">Acción de ventana de sectores</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sector</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_sector_tree"/>
+    </record>
+        
+</odoo>

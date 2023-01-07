@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="rd_location.location_menu_categ" name="Localizacion" parent="base.menu_custom" sequence="35"/>
+     <!-- This Menu Item must have a parent and an action -->
+     
+    <menuitem id="menu_municipio" name="Municipios" action="action_window_municipio" parent="rd_location.location_menu_categ"/>
+    
+    <menuitem id="menu_ciudad" name="Ciudades" action="action_window_ciudad" parent="rd_location.location_menu_categ"/>
+
+    <menuitem id="menu_distrito_municipal" name="Distritos municipales" action="action_window_distrito_municipal" parent="rd_location.location_menu_categ"/>
+
+    <menuitem id="menu_seccion" name="Secciones" action="action_window_seccion" parent="rd_location.location_menu_categ"/>
+
+    <menuitem id="menu_sector" name="Sectores" action="action_window_sector" parent="rd_location.location_menu_categ"/>
+     
+</odoo>

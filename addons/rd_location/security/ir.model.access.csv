@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ciudad,Acceso a ciudades,model_ciudad,base.group_user,1,1,1,1
+access_municipio,Acceso a municipios,model_municipio,base.group_user,1,1,1,1
+access_distrito_municipal,Acceso a distritos municipales,model_distrito_municipal,base.group_user,1,1,1,1
+access_seccion,Acceso a secciones,model_seccion,base.group_user,1,1,1,1
+access_sector,Acceso a sectores,model_sector,base.group_user,1,1,1,1
